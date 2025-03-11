@@ -63,8 +63,3 @@ To run the 1v1 Chess Game, follow the steps below:
   - On Windows: Follow the SFML installation guide at [SFML Downloads](https://www.sfml-dev.org/download.php).
   - On macOS: `brew install sfml`
 
-### Clone the repository
-
-```bash
-git clone https://github.com/yourusername/1v1-chess-game.git
-cd 1v1-chess-game
