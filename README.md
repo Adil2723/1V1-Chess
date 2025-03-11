@@ -1,4 +1,4 @@
-#♟️♟️ 1v1 Chess Game
+# ♟️♟️ 1v1 Chess Game
 
 ## Overview
 
