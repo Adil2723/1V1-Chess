@@ -1,65 +1,72 @@
-# ♟️♟️ 1v1 Chess Game
+# ♟️ 1v1 Chess Game  
 
-## Overview
+## 🏆 Overview  
 
-The **1v1 Chess Game** is a graphical chess application where two players can compete in a game of chess. The game follows the standard chess rules and incorporates a timed turn feature, ensuring each player has a limited amount of time to make their move. The game is developed using **SFML** (Simple and Fast Multimedia Library), providing an interactive and visually rich experience. The game design is based on **Object-Oriented Programming (OOP)** principles, making it easy to maintain and extend.
+The **1v1 Chess Game** is a visually rich chess application where two players compete against each other. The game strictly follows **standard chess rules** and features a **timed turn system**, ensuring a competitive and fair experience.  
 
-## Features
+Developed using **C++ and SFML**, this project leverages **Object-Oriented Programming (OOP) principles** to create a maintainable and scalable chess system.  
 
-- **Graphical User Interface (GUI)** powered by SFML.
-- **1v1 Turns**: Players take turns in a standard chess manner.
-- **Timed Turns**: Each player has a set amount of time for their turn to maintain competitive pacing.
-- **Piece Movement**: Click and drag pieces to move them.
-- **Valid Move Highlighting**: Squares where a piece can legally move are highlighted.
-- **Game Timer**: A countdown timer for each player, ensuring fair and timely gameplay.
-- **Chess Rules**: Full support for chess rules, including check, checkmate, and stalemate conditions.
+---
 
-## Object-Oriented Programming (OOP) Design
+## 🚀 Features  
 
-The game is built around the core principles of Object-Oriented Programming (OOP), including **Encapsulation**, **Inheritance**, **Polymorphism**, and **Abstraction**. Below are some key concepts and how they are applied in this project:
+✅ **Graphical User Interface (GUI)** – Smooth and interactive gameplay powered by **SFML**  
+✅ **1v1 Gameplay** – Players take turns in a standard chess manner  
+✅ **Timed Turns** – Players must move within a set time limit to keep the game fast-paced  
+✅ **Valid Move Highlighting** – Legal moves are visually highlighted for better guidance  
+✅ **Drag & Drop Movement** – Click and drag pieces for intuitive movement  
+✅ **Check, Checkmate & Stalemate Detection** – Full chess rule enforcement  
+✅ **Custom Timer** – Players have a countdown for each move, enhancing strategy and competition  
 
-### Classes and Objects
+---
 
-- **Piece Class**: Represents a chess piece. Each piece has properties such as its color, type (pawn, rook, bishop, etc.), and position on the board. Methods in this class handle moving pieces, checking for valid moves, and updating the board state.
+## 🏗️ Object-Oriented Design  
 
-- **Board Class**: Manages the entire chess board, storing pieces, checking for game conditions (check, checkmate, stalemate), and handling the game logic. It provides a clear abstraction for interacting with the chessboard and the pieces.
+The game is structured using **OOP principles** like **Encapsulation, Inheritance, Polymorphism, and Abstraction** for modular and maintainable code.  
 
-- **Player Class**: Represents a player in the game. This class holds information about the player's time, whether they are in check or checkmate, and their active pieces. The player class also manages the timer for each player.
+### 🏛️ **Key Classes**  
 
-- **Game Class**: This is the core class that controls the flow of the game. It keeps track of the current player, manages the game timer, and checks for game-over conditions like checkmate or stalemate.
+- **`Piece` Class** – Defines chess pieces, including their color, type, and position. Manages piece movement and validation.  
+- **`Board` Class** – Represents the chessboard, tracks piece positions, and enforces game rules.  
+- **`Player` Class** – Manages each player's pieces, moves, and timer.  
+- **`Game` Class** – Handles game flow, turn management, and win conditions.  
+- **`Timer` Class** – Controls the countdown clock for each player's turn.  
 
-- **Timer Class**: A utility class to handle the countdown timer for each player. It keeps track of time, updates the display, and ensures the player’s turn is limited to the specified time.
+### 🏹 **OOP Concepts Applied**  
 
-### Inheritance and Polymorphism
+- **Inheritance** – The `Piece` class is a base class, while `King`, `Queen`, `Pawn`, etc., inherit from it, implementing unique movement logic.  
+- **Polymorphism** – Each piece type overrides the `getValidMoves()` function to apply its own movement strategy.  
+- **Encapsulation** – Data like a piece's position and color are private and accessed via controlled methods.  
+- **Abstraction** – The `Game` class abstracts the complexity of chess logic, allowing high-level interaction without handling low-level mechanics.  
 
-- **Piece Inheritance**: The `Piece` class is a base class, and each specific piece (like `King`, `Queen`, `Pawn`, `Rook`, etc.) inherits from it. Each derived class implements its own logic for valid movements, capturing, and special behaviors (such as castling for the `King` or promotion for the `Pawn`).
+---
 
-- **Move Strategies**: Polymorphism is used for different movement strategies of the chess pieces. Each piece has a method called `getValidMoves()` that is overridden by the specific piece types to calculate its unique set of legal moves.
+## 🛠️ Technologies Used  
 
-### Encapsulation
+| Technology | Purpose |
+|------------|---------|
+| **C++** | Core game logic and OOP implementation |
+| **SFML** | Graphics rendering and user input handling |
+| **Makefile** | Simplifies project compilation |
 
-- Each class encapsulates its data, ensuring that players and pieces interact only through the class’s public interface. This approach keeps the game’s internal workings hidden from external components, improving modularity and maintainability.
+---
 
-- Example: The `Piece` class has private members for `position` and `color`, which can only be accessed or modified through getter and setter methods.
+## 🔧 Installation  
 
-### Abstraction
+Follow these steps to install and run the **1v1 Chess Game**:
 
-- The game abstracts the complexities of chess logic into manageable objects. For instance, the `Game` class encapsulates the overall game logic, so the main program only needs to interact with this high-level abstraction, rather than dealing with the individual mechanics of pieces and board state.
+### 📌 **Prerequisites**  
 
-## Technologies Used
+- Install **SFML** on your system:  
+  - **Linux**: `sudo apt-get install libsfml-dev`  
+  - **Windows**: [Download SFML](https://www.sfml-dev.org/download.php)  
+  - **MacOS**: `brew install sfml`  
 
-- **SFML**: A multimedia library to create graphical windows and manage user input.
-- **C++**: The primary programming language used to implement the game logic and object-oriented structure.
-- **Makefile**: For building and compiling the project.
+---
 
-## Installation
+### 💡 **Run the Game**  
 
-To run the 1v1 Chess Game, follow the steps below:
-
-### Prerequisites
-
-- Install **SFML** on your system.
-  - On Linux: `sudo apt-get install libsfml-dev`
-  - On Windows: Follow the SFML installation guide at [SFML Downloads](https://www.sfml-dev.org/download.php).
-  - On macOS: `brew install sfml`
-
+1️⃣ **Clone the repository**  
+```sh
+git clone https://github.com/Adil2723/1v1-Chess-Game.git
+cd 1v1-Chess-Game
