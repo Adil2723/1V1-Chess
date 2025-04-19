@@ -2,8 +2,8 @@
 
 ![GitHub](https://img.shields.io/github/license/Adil2723/ChessGame?color=blue)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![Contributors](https://img.shields.io/github/contributors/yourusername/ChessGame?color=yellow)
-![Repo Size](https://img.shields.io/github/repo-size/yourusername/ChessGame?color=orange)
+![Contributors](https://img.shields.io/github/contributors/Adil2723/ChessGame?color=yellow)
+![Repo Size](https://img.shields.io/github/repo-size/Adil2723/ChessGame?color=orange)
 
 A **C++** chess game built with **SFML (Simple and Fast Multimedia Library)**. This project demonstrates fundamental concepts of **Object-Oriented Programming (OOP)**, **inheritance**, and **polymorphism**, while also leveraging SFML's powerful graphics capabilities for rendering chess pieces and the chessboard.
 
