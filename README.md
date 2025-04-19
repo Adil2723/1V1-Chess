@@ -1,72 +1,65 @@
-# ♟️ 1v1 Chess Game  
+# Chess Game in C++ with SFML 🎮
 
-## 🏆 Overview  
+![GitHub](https://img.shields.io/github/license/Adil2723/ChessGame?color=blue)
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Contributors](https://img.shields.io/github/contributors/yourusername/ChessGame?color=yellow)
+![Repo Size](https://img.shields.io/github/repo-size/yourusername/ChessGame?color=orange)
 
-The **1v1 Chess Game** is a visually rich chess application where two players compete against each other. The game strictly follows **standard chess rules** and features a **timed turn system**, ensuring a competitive and fair experience.  
-
-Developed using **C++ and SFML**, this project leverages **Object-Oriented Programming (OOP) principles** to create a maintainable and scalable chess system.  
-
----
-
-## 🚀 Features  
-
-✅ **Graphical User Interface (GUI)** – Smooth and interactive gameplay powered by **SFML**  
-✅ **1v1 Gameplay** – Players take turns in a standard chess manner  
-✅ **Timed Turns** – Players must move within a set time limit to keep the game fast-paced  
-✅ **Valid Move Highlighting** – Legal moves are visually highlighted for better guidance  
-✅ **Drag & Drop Movement** – Click and drag pieces for intuitive movement  
-✅ **Check, Checkmate & Stalemate Detection** – Full chess rule enforcement  
-✅ **Custom Timer** – Players have a countdown for each move, enhancing strategy and competition  
+A **C++** chess game built with **SFML (Simple and Fast Multimedia Library)**. This project demonstrates fundamental concepts of **Object-Oriented Programming (OOP)**, **inheritance**, and **polymorphism**, while also leveraging SFML's powerful graphics capabilities for rendering chess pieces and the chessboard.
 
 ---
 
-## 🏗️ Object-Oriented Design  
+## Features 🌟
 
-The game is structured using **OOP principles** like **Encapsulation, Inheritance, Polymorphism, and Abstraction** for modular and maintainable code.  
-
-### 🏛️ **Key Classes**  
-
-- **`Piece` Class** – Defines chess pieces, including their color, type, and position. Manages piece movement and validation.  
-- **`Board` Class** – Represents the chessboard, tracks piece positions, and enforces game rules.  
-- **`Player` Class** – Manages each player's pieces, moves, and timer.  
-- **`Game` Class** – Handles game flow, turn management, and win conditions.  
-- **`Timer` Class** – Controls the countdown clock for each player's turn.  
-
-### 🏹 **OOP Concepts Applied**  
-
-- **Inheritance** – The `Piece` class is a base class, while `King`, `Queen`, `Pawn`, etc., inherit from it, implementing unique movement logic.  
-- **Polymorphism** – Each piece type overrides the `getValidMoves()` function to apply its own movement strategy.  
-- **Encapsulation** – Data like a piece's position and color are private and accessed via controlled methods.  
-- **Abstraction** – The `Game` class abstracts the complexity of chess logic, allowing high-level interaction without handling low-level mechanics.  
+- **Chessboard Rendering**: An 8x8 grid with alternating light and dark squares.
+- **Piece Textures**: Chess pieces (Pawn, Rook, Knight, Bishop, Queen, King) are represented with PNG images loaded as textures.
+- **Object-Oriented Design**:
+  - A base `Piece` class with subclasses for each specific chess piece.
+  - Inheritance and polymorphism for customized piece behavior.
+- **SFML Integration**: Uses SFML to handle window management, graphics rendering, and events.
 
 ---
 
-## 🛠️ Technologies Used  
+## Technologies & Concepts 🔧
 
-| Technology | Purpose |
-|------------|---------|
-| **C++** | Core game logic and OOP implementation |
-| **SFML** | Graphics rendering and user input handling |
-| **Makefile** | Simplifies project compilation |
+This project utilizes the following tools and concepts:
 
----
-
-## 🔧 Installation  
-
-Follow these steps to install and run the **1v1 Chess Game**:
-
-### 📌 **Prerequisites**  
-
-- Install **SFML** on your system:  
-  - **Linux**: `sudo apt-get install libsfml-dev`  
-  - **Windows**: [Download SFML](https://www.sfml-dev.org/download.php)  
-  - **MacOS**: `brew install sfml`  
+- **C++**: Core programming language for game logic and rendering.
+- **SFML (Simple and Fast Multimedia Library)**: For rendering the chessboard and managing graphical assets.
+- **Object-Oriented Programming**:
+  - **Inheritance**: Common functionality in the `Piece` base class, with specialized behavior in subclasses.
+  - **Polymorphism**: Different piece behaviors are handled dynamically via method overriding.
+- **Textures & Sprites**: Chess pieces are loaded as PNG textures and rendered using SFML sprites.
 
 ---
 
-### 💡 **Run the Game**  
+## Project Structure 📂
 
-1️⃣ **Clone the repository**  
-```sh
-git clone https://github.com/Adil2723/1v1-Chess-Game.git
-cd 1v1-Chess-Game
+Here's an overview of the project structure:
+
+```plaintext
+ChessGame/
+│
+├── assets/                  # Folder containing chess piece textures (e.g., white_pawn.png, black_king.png)
+│
+├── src/                     # Source code files
+│   ├── main.cpp             # Main entry point of the application
+│   ├── Piece.hpp            # Base class for all pieces
+│   ├── Piece.cpp            # Implementation of Piece class
+│   ├── Pawn.hpp             # Pawn class header
+│   ├── Pawn.cpp             # Pawn class implementation
+│   ├── Rook.hpp             # Rook class header
+│   ├── Rook.cpp             # Rook class implementation
+│   ├── Knight.hpp           # Knight class header
+│   ├── Knight.cpp           # Knight class implementation
+│   ├── Bishop.hpp           # Bishop class header
+│   ├── Bishop.cpp           # Bishop class implementation
+│   ├── Queen.hpp            # Queen class header
+│   ├── Queen.cpp            # Queen class implementation
+│   ├── King.hpp             # King class header
+│   ├── King.cpp             # King class implementation
+│   ├── chessBoard.hpp       # Chessboard class header
+│   ├── chessBoard.cpp       # Chessboard class implementation
+│
+├── CMakeLists.txt           # CMake build configuration
+└── README.md                # Project description (this file)
